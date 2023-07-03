@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import AddTodo from "./component/Addtodo";
+import TodoList from "./component/todoList";
+import TodoContextWrapper from "./context/TodoContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center bg-white ">
+      <div className=" flex flex-col justify-center w-[500px] border border-black bg-gray-400">
+        <TodoContextWrapper>
+          <AddTodo />
+          <TodoList />
+        </TodoContextWrapper>
+      </div>
     </div>
   );
 }
