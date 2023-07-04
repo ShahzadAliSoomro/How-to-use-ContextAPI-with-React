@@ -25,11 +25,11 @@ function TodoList() {
   }
   console.log(todos);
   return (
-    <div className="w-full">
+    <div className="w-full px-2 p-2">
       {todos?.map((todoItem, index) => (
         <div
           key={index}
-          className="flex justify-around bg-slate-500 mt-5 border border-white "
+          className="flex justify-around bg-slate-500 mt-5 border border-white"
         >
           {editIndex === index ? (
             <input
